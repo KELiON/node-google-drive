@@ -80,6 +80,7 @@ var NodeGoogleDrive = function(options) {
       return service;
     }).then(function(service) {
       _this.service.files = Promise.promisifyAll(service.files);
+      _this.service.permissions = Promise.promisifyAll(service.permissions);
 
       return _this.service;
     });
